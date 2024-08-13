@@ -19,7 +19,7 @@ auto DllMain( HMODULE hmod, DWORD call, LPVOID res ) -> BOOL APIENTRY
         uintptr_t address = pscanhelper::pscan( "your hex sig here" ); // The format of the sig must be an hexadecimal byte sequence, ex: (69 69 ?? 69 ? 69)
         if ( address )
         {
-            std::cout << "[+] Pattern found at address: " << std::hex << address << std::endl;
+            std::cout << "[+] Pattern found at address: 0x" << std::hex << address << std::endl;
             disasmhelper::disassemble_instructions( reinterpret_cast< void* >( address ), 0x100 );
         }
         else
