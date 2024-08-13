@@ -42,5 +42,5 @@ uintptr_t address = pscanhelper::pscan( "48 8B 85 ? ? ? ? 48 89 44 24 ? C7 44 24
 ```
 
 Once you have done that (make sure the signature is valid and correctly points to a logic bunch of instructions) you can compile and run, then appreciate the true mafia boss power!!!
-![magic](https://cdn.discordapp.com/attachments/1142220291859292411/1272847353447190590/Untitled.png?ex=66bc76f9&is=66bb2579&hm=86dc374b2dbfd50728d5e156708dc7c52d3d6021ca0bac3b8927f80b5b5ca02a&)
+![magic](https://cdn.discordapp.com/attachments/1142220291859292411/1272849591884320769/Untitleddddd.png?ex=66bc790f&is=66bb278f&hm=010bb02748205aa991c9cb0afa6f1c53bb78bfc839318aee5f3210fdd8775ea1&)
 
