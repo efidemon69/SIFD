@@ -24,7 +24,7 @@ auto disasmhelper::disassemble_instructions( void* address, size_t length ) -> v
     std::vector<uint8_t> code( length );
     if ( !ReadProcessMemory( GetCurrentProcess( ), address, code.data( ), length, nullptr ) )
     {
-        std::cout << "[-] Failed to read memory at address: " << address << std::endl;
+        std::cout << "[-] Failed to read memory at address: 0x" << address << std::endl;
         return;
     }
 
@@ -43,7 +43,7 @@ auto disasmhelper::disassemble_instructions( void* address, size_t length ) -> v
             // We store the formatted instruction string in the following buffer then format the decoded instruction to a human readable string (would take us years to understand the result without that)
             char buffer[ 256 ];
             ZydisFormatterFormatInstruction( &formatter, &instruction, operands, instruction.operand_count_visible, buffer, sizeof( buffer ), runtime_address, ZYAN_NULL );
-            std::cout << "[>] " << std::hex << runtime_address << ": " << buffer << std::endl; // wow, what's this for???
+            std::cout << "[>] 0x" << std::hex << runtime_address << ": " << buffer << std::endl; // wow, what's this for???
 
             // Well here we just update the offset and runtime address for the next instruction..
             offset += instruction.length;
